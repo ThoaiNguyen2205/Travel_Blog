@@ -1,0 +1,49 @@
+.postDetail {
+    .postDetail__title {
+        text-align: center;
+        margin: 70px 0;
+
+        h3 {
+            font-weight: 300;
+            margin: 20px 0;
+        }
+
+        h4 {
+            font-weight: 200;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .postDetail__title-date {
+            font-style: italic;
+            font-size: 12px;
+            color: blue;
+            margin-bottom: 70px;
+        }
+    }
+
+    .postDetail__info {
+        width: 80%;
+        margin: 0 auto;
+
+        .postDetail__info-item {
+            p {}
+
+            figure {
+                img {
+                    width: 100%;
+                }
+
+                figcaption {
+                    text-align: center;
+                    color: rgb(86, 140, 239);
+                    font-weight: 300;
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,194 @@
+// 
+
+
+.header {
+    .hidden {
+        display: none;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    .header__title.header-change {
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+    }
+
+    .header__title {
+        background-color: rgba(0, 0, 0, .1);
+        text-align: center;
+        width: 100%;
+        float: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: block;
+        color: white;
+        transition: all .5s;
+
+
+        .header__title-link {
+            border-bottom: 1px dashed #ccc;
+
+            a {
+                h2 {
+                    font-family: 'Edu SA Beginner', cursive;
+                    font-size: 50px;
+                    margin: 30px 0;
+                }
+            }
+        }
+
+        .header__title-navbar.navbar-change {
+            margin: 10px auto;
+            width: 70%;
+
+        }
+
+        .header__title-navbar {
+            width: 70%;
+            margin: 20px auto;
+
+            .navbar__link {
+                transition: all .5s;
+
+                &:hover {
+                    color: #f55f8d;
+                }
+            }
+
+
+            .header__navbar-link {
+                a {
+                    margin-left: 40px;
+                    font-size: 14px;
+                    letter-spacing: 1.5px;
+                }
+
+                span {
+                    .first-link {
+                        margin-right: 0px;
+                    }
+
+                    .navbar__icons {
+                        font-size: 10px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+
+            .header__navbar-icons {}
+        }
+    }
+
+    .header__banner {
+        img {}
+
+        img.blur {
+            filter: blur(5px);
+        }
+    }
+}
+
+//Footer
+.footer {
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
+
+    .footer__copyright {
+        padding: 10px 0;
+        border-bottom: 1px solid rgb(198, 198, 198);
+
+        .footer__copyright-item {}
+
+        span {
+            font-size: 14px;
+            color: rgb(198, 198, 198);
+        }
+    }
+
+    .footer__contact {
+        padding: 25px;
+        width: 60%;
+        margin: 0 auto;
+
+
+        .footer__contact-link {
+            color: rgb(198, 198, 198);
+            transition: all .5s;
+            margin: 0 20px;
+            display: flex;
+            align-items: center;
+
+            &:hover {
+                color: #f55f8d;
+            }
+
+            .footer__contact-item {
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                border-radius: 50%;
+                border: 1px solid rgb(198, 198, 198);
+                padding: 7px;
+            }
+        }
+    }
+
+
+
+
+}
+
+/* BACK TO TOP */
+#back-to-top-button {
+    line-height: 45px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    box-shadow: -4px 4px 24px -10px #f55f8d;
+    z-index: 1000;
+
+
+    a {
+        // line-height: 50px;
+        color: white;
+        align-items: center;
+    }
+
+    &::after {
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+
+        color: #fff;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(8, 12, 238);
+    }
+
+    &:active {
+        background-color: #555;
+    }
+
+
+
+}
+
+#back-to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+}

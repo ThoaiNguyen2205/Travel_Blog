@@ -1,0 +1,41 @@
+.destinations {
+    .destinations__title {}
+
+    .destinations__list {
+        .destinations__list-item {
+            border-bottom: 1px solid rgb(135, 135, 135);
+
+            .destinations__item-title {
+                margin-top: 100px;
+                margin-bottom: 30px;
+                transition: all .5s;
+                text-align: center;
+
+                &:hover {
+                    color: #f55f8d;
+                }
+            }
+
+            .destinations__item-img {
+                margin-bottom: 100px;
+                text-align: center;
+
+                figure {
+                    margin-bottom: 100px;
+
+                    img {
+                        width: 80%;
+                    }
+
+                    figcaption {
+                        color: rgb(117, 117, 117);
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                }
+
+
+            }
+        }
+    }
+}

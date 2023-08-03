@@ -1,0 +1,223 @@
+// Posts
+.posts {
+    .posts__list {
+        .posts__list-item {
+
+            .posts__item-img {
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 200px;
+                    object-fit: fill;
+                    transition: all 2s;
+
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .posts__item-text {
+                margin-top: 10px;
+
+                h5 {}
+
+                p {
+                    &:first-of-type {
+                        color: #f55f8d;
+                        letter-spacing: 1.5px;
+                        font-weight: bold;
+                    }
+
+                    &:last-of-type {
+                        font-size: 14px;
+                        font-style: italic;
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+//tours 
+.tours {
+    .tours__title {}
+
+    .tours__list {
+        .tours__list-item {
+            .tours__item {
+                :hover .tours__item-button {
+                    opacity: 1;
+                }
+
+                .tours__item-img {
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 250px;
+                    }
+                }
+
+                .tours__item-text {
+                    h3 {}
+
+                    p {}
+                }
+
+                .tours__item-button {
+                    color: rgb(90, 100, 247);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(0, 0, 0, 0.5);
+                    transition: all 1s;
+                    opacity: 0;
+
+                    a {
+                        background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+                        background-size: 200%;
+                        color: rgba(255, 255, 255, .5);
+                        border-radius: 3px;
+                        padding: 6px 10px;
+                        position: absolute;
+                        right: 0;
+                        margin: 10px;
+                        transition: all .5s;
+
+                        &:hover {
+                            background-position: right center;
+                            color: rgba(255, 255, 255);
+                        }
+                    }
+
+
+                }
+            }
+
+        }
+    }
+}
+
+// library
+.library {
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+
+    .library__title {}
+
+    .library__content {
+        width: 95%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1.5fr;
+        gap: 35px;
+
+        .library__item {
+            position: relative;
+            overflow: hidden;
+
+            &:first-of-type {
+                grid-column: 1/ span 2;
+            }
+
+            &:nth-of-type(5) {
+                grid-column: 1/ span 2;
+            }
+
+            &:last-of-type {
+                grid-row: 2/ span 2;
+                grid-column: 3/4;
+            }
+
+            &:hover .library__item-overlay .overlay__text {
+                opacity: 1;
+                bottom: 25px;
+            }
+
+            &:hover .library__item-overlay {
+                opacity: 1;
+            }
+
+            &::before {
+                content: "";
+                width: 50%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -100%;
+                display: block;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0) 0, rgba(255, 255, 255, .3) 100%);
+                transform: skewX(-25deg);
+                transition: all .75s;
+            }
+
+            &:hover::before {
+                left: 125%;
+            }
+
+            .library__item-img {
+                display: inline;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 10px;
+                }
+            }
+
+            .library__item-overlay {
+                background-color: rgba(0, 0, 0, .4);
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: all .5s;
+                border-radius: 10px;
+
+                .overlay__text {
+                    position: absolute;
+                    left: 25px;
+                    bottom: 0px;
+                    color: white;
+                    font-size: 22px;
+                    text-align: left;
+                    opacity: 0;
+                    transition: all .5s;
+
+                    p {
+                        font-size: 16px;
+                        color: white;
+                        opacity: .7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//
+// Animation
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeInUp {
+    animation: fadeInUp 2s ease-in-out;
+}

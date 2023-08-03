@@ -1,0 +1,77 @@
+.service {
+    .service__title {
+        h2 {}
+
+        p {}
+    }
+
+    .service__table {
+        thead {
+            tr {
+                .table__col-id {
+                    width: 8%;
+
+                    span {
+                        margin-right: 5px;
+                    }
+
+                    .service__table-icons {
+                        cursor: pointer;
+                        margin: 0 2px;
+                    }
+                }
+
+                .table__col-destination {
+                    width: 12%;
+                }
+
+                .table__col-img {
+                    width: 12%;
+                }
+
+                .table__col-service {
+                    width: 60%;
+                }
+
+                .table__col-note {
+                    width: 8%;
+                }
+            }
+
+        }
+
+        tbody {
+            tr {
+                td {
+                    img {}
+
+                    table {
+                        thead {
+                            tr {
+                                th {}
+
+                                .colum-1 {
+                                    width: 30%;
+                                }
+
+                                .colum-2 {
+                                    width: 20%;
+                                }
+
+                                .colum-3 {
+                                    width: 50%;
+                                }
+                            }
+                        }
+
+                        tbody {
+                            tr {
+                                td {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
