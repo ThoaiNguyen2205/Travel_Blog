@@ -1,4 +1,4 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
+// import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 const initialState: ToursState = {
   arrTours: [
@@ -358,33 +358,33 @@ export interface Related {
   image: Image[];
 }
 
-const travelReducer = createSlice({
-  name: "travelReducer",
-  initialState,
-  reducers: {
-    getAllServices: (
-      state: ToursState,
-      action: PayloadAction<TypeService[]>
-    ) => {
-      state.arrServices = action.payload;
-      state.originalArrServices = action.payload;
-    },
-    sortAscending: (state: ToursState, action: PayloadAction) => {
-      state.arrServices.sort((a, b) => (a.id > b.id ? 1 : -1));
-    },
-    sortDecrease: (state: ToursState, action: PayloadAction) => {
-      state.arrServices.sort((a, b) => (a.id > b.id ? -1 : 1));
-    },
-    // searchName: (state: ToursState, action) => {
-    //   const key = action.payload.toLowerCase();
-    //   state.arrServices = state.originalArrServices.filter((obj) =>
-    //     obj.name.toLowerCase().includes(key)
-    //   );
-    // },
-  },
-});
+// const travelReducer = createSlice({
+//   name: "travelReducer",
+//   initialState,
+//   reducers: {
+//     getAllServices: (
+//       state: ToursState,
+//       action: PayloadAction<TypeService[]>
+//     ) => {
+//       state.arrServices = action.payload;
+//       state.originalArrServices = action.payload;
+//     },
+//     sortAscending: (state: ToursState, action: PayloadAction) => {
+//       state.arrServices.sort((a, b) => (a.id > b.id ? 1 : -1));
+//     },
+//     sortDecrease: (state: ToursState, action: PayloadAction) => {
+//       state.arrServices.sort((a, b) => (a.id > b.id ? -1 : 1));
+//     },
+//     // searchName: (state: ToursState, action) => {
+//     //   const key = action.payload.toLowerCase();
+//     //   state.arrServices = state.originalArrServices.filter((obj) =>
+//     //     obj.name.toLowerCase().includes(key)
+//     //   );
+//     // },
+//   },
+// });
 
-export const { getAllServices, sortAscending, sortDecrease } =
-  travelReducer.actions;
+// export const { getAllServices, sortAscending, sortDecrease } =
+//   travelReducer.actions;
 
-export default travelReducer.reducer;
+// export default travelReducer.reducer;

@@ -1,17 +1,18 @@
 "use client";
 import "../../../style/pages/details/details.scss";
-import { RootState } from "@/redux/configStore";
+
 import { Related, TypeTours } from "@/redux/reducers/travelReducer";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { useSelector } from "react-redux";
+import { arrTours } from "../../../../public/assets/data/data";
+// import { useSelector } from "react-redux";
 interface TypeParams {
   slug: string;
 }
 export default function Details({ params }: { params: TypeParams }) {
   const { slug } = params;
-  const { arrTours } = useSelector((state: RootState) => state.travelReducer);
+  // const { arrTours } = useSelector((state: RootState) => state.travelReducer);
 
   const toursDetail: TypeTours | undefined = arrTours.find(
     (tours: TypeTours) => tours.id === String(slug)

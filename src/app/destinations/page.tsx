@@ -1,13 +1,14 @@
 "use client";
-import { RootState } from "@/redux/configStore";
+// import { RootState } from "@/redux/configStore";
 import { TypeTours } from "@/redux/reducers/travelReducer";
 import React from "react";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import "../../style/pages/destinations/destinations.scss";
 import Link from "next/link";
+import { arrTours } from "../../../public/assets/data/data";
 export default function Destination() {
-  const { arrTours } = useSelector((state: RootState) => state.travelReducer);
+  // const { arrTours } = useSelector((state: RootState) => state.travelReducer);
   const renderDestination = (): JSX.Element[] => {
     return arrTours.map((des: TypeTours, index: number) => {
       return (

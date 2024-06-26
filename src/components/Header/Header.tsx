@@ -14,7 +14,6 @@ import {
   faPinterest,
 } from "@fortawesome/free-brands-svg-icons";
 import { useRouter } from "next/router";
-import { DropDestinationProps } from "antd/es/menu/menu";
 
 const Header: React.FC = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -44,7 +43,7 @@ const Header: React.FC = () => {
       key: "3",
     },
   ];
-  const dropDestination: DropDestinationProps["items"] = [
+  const dropDestination = [
     {
       label: <Link href={"/destinations#daNang"}>Đà Nẵng</Link>,
       key: "1",
@@ -195,7 +194,7 @@ const Header: React.FC = () => {
       </div>
       <div className={`header__banner `}>
         <img
-          src="https://anhnendep.net/wp-content/uploads/2015/07/hinh-nen-italy-venice-2.jpg"
+          src="https://ik.imagekit.io/tvlk/blog/2022/12/cau-vang-da-nang-5.jpg?tr=dpr-2,w-675"
           alt=""
           className={`w-100 ${isHeaderVisible ? "" : "blur"}`}
           style={{ height: "80vh" }}

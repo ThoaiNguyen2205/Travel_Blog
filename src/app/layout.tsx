@@ -2,7 +2,7 @@ import BackToTopButton from "@/components/BackToTop/BackToTop";
 import "./globals.css";
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
-import { Providers } from "@/redux/provider";
+// import { Providers } from "@/redux/provider";
 
 export const metadata = {
   title: "Blog Travel",
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header></Header>
-        <Providers>{children}</Providers>
+        <div>{children}</div>
         <Footer></Footer>
         <BackToTopButton></BackToTopButton>
       </body>

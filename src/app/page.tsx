@@ -1,19 +1,20 @@
 "use client";
 import "../style/pages/home/home.scss";
-import { TypePost, arrPost } from "../../public/assets/data/data";
+import { TypePost, arrPost, arrTours } from "../../public/assets/data/data";
 import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { RootState } from "@/redux/configStore";
-import { TypeTours } from "@/redux/reducers/travelReducer";
+// import { useSelector } from "react-redux";
+// import { RootState } from "@/redux/configStore";
+// import { TypeTours } from "@/redux/reducers/travelReducer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
+import { TypeTours } from "@/redux/reducers/travelReducer";
 
 type Props = {};
 export default function Home({}: Props) {
   const [isLibraryVisible, setIsLibraryVisible] = useState(false);
-  const { arrTours } = useSelector((state: RootState) => state.travelReducer);
+  // const { arrTours } = useSelector((state: RootState) => state.travelReducer);
 
   const renderPost = (): JSX.Element[] => {
     return arrPost.map((post: TypePost, index) => {
@@ -36,7 +37,7 @@ export default function Home({}: Props) {
     });
   };
   const renderTours = (): JSX.Element[] => {
-    return arrTours.map((tour: TypeTours, index) => {
+    return arrTours.map((tour: TypeTours, index: any) => {
       return (
         <div className="tours__list-item col-lg-4 col-md-6 col-12">
           <div className="tours__item my-4">
